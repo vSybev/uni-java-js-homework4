@@ -46,10 +46,6 @@ public class HomeController {
 
     HangmanGame hangmanGame = hangmanGameService.makeGuess(id, guessLetter);
 
-    // TODO: Добавете логика, за край на
-    //  играта - да се показва game-end.html и
-    //  съобщение "Спечелена"  или "Загубена"
-
     if(hangmanGame.getStatus().equals(Status.WON)){
       ModelAndView modelAndViewWon =
           new ModelAndView("game-end.html");
